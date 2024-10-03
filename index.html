@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
-  <title>SBA 316 DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>SBA 316</title>
 </head>
 <body>
-  <button id="open-btn">
-    <p>Let's play</p>
-  </button>
+    <button id="open-btn">
+        <p>Let's play!</p>
+    </button>  
 
-  <div id="modal-container">
-    <div id="modal">
-     <form id="userForm">
-      <label for="username">Enter your name:</label>
-      <input type="text" id="usernameInput" required>
-      <button type="submit">Submit</button>
-     </form>
-     <p id="greeting"></p>
-     <div id="close-btn">&times;</div>
-     <hr>
-     <h3>Guess the Number Game!</h3>
-     <form id="guess-form">
-      <input type="number" id="guess-input" min="1" max="100" placeholder="Guess a number (1-100)" required>
-      <button type="submit" id="guess-btn">Guess</button>
-     </form>
-     <ul id="guesses-list"></ul>
+    <div id="modal-container">
+        <div id="modal">
+            <p id="greeting" style="display: none;"></p> <!-- Hidden initially -->
+            <form id="name-form">
+                <input type="text" id="name-input" placeholder="Enter your name" required>
+                <button type="submit">Submit</button>
+            </form>
+
+            <form id="guess-form" style="display: none;"> <!-- Hidden initially -->
+                <input type="number" id="guess-input" placeholder="Guess a number (1-100)" required>
+                <button type="submit">Guess</button>
+            </form>
+
+            <ul id="guesses-list"></ul> <!-- List to show guesses -->
+            <div id="close-btn">&times;</div>
+        </div>
     </div>
-  </div>
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
